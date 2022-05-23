@@ -1,0 +1,377 @@
+@keyframes borderBottom
+  0%
+    width: 0
+  100%
+    width: 100%
+
+@keyframes pulse 
+	0% 
+		transform: scale(0.95)
+		box-shadow: 0 0 0 0 rgba(255, 177, 66, 0.7)
+	
+	
+	70% 
+		transform: scale(1)
+		box-shadow: 0 0 0 15px rgba(255, 177, 66, 0)
+	
+	
+	100% 
+		transform: scale(0.95)
+		box-shadow: 0px 0px 10px rgba(255, 177, 66, 0)
+	
+
+
+
+.index
+	.index_landing
+		margin-top: 105px
+		.landing-main-container
+			display: flex
+			.landing-left-container
+				width: 530px
+				flex: none
+				.landing_title_block
+					display: flex
+					flex-direction: column
+					grid-gap: 29px
+					p.landing_title
+						+g-b
+						font-size: 65px
+						line-height: 67px
+						color: $gray3
+					a.start_project
+						+flex_center
+						width: 191px
+						padding: 11px 0
+						background: rgba(244, 164, 66, 0.16)
+						backdrop-filter: blur(3px)
+						border-radius: 41px
+						+g-eb
+						font-size: 18px
+						line-height: 22px
+						color: $yellow2
+
+				.landing_bottom_content
+					display: flex
+					grid-gap: 8px
+					margin-top: 150px
+					p
+						+g-r
+						font-size: 16px
+						line-height: 26px
+						color: $green_4
+					img
+						margin-top: -20px
+						height: max-content
+						width: max-content
+
+			.landing-right-container
+				position: relative
+				overflow: hidden
+				height: max-content
+				.brain_img
+					max-width: 690px
+					max-height: 515px
+					margin-left: -35px
+					img
+						width: 100%
+				
+				.dot_brain
+					position: absolute
+					bottom: 220px
+					left: 100px
+					background-color: $white
+					width: 11.53px
+					height: 11.53px
+					box-shadow: 0px 0px 5px $shadow
+					border-radius: 50%
+					transform: scale(1)
+					animation-delay: 1s
+					&:hover
+						animation: pulse 2s infinite
+					&:nth-of-type(2)
+						top: 134px
+						left: 228px
+					&:nth-of-type(3)
+						bottom: 162px
+						left: 275px
+					&:nth-of-type(4)
+						top: 185px
+						right: 273px
+						left: unset
+						bottom: unset
+					&:nth-of-type(5)
+						bottom: 74px
+						left: 327px
+					&:nth-of-type(6)
+						top: 296px
+						right: 114px
+						bottom: unset
+						left: unset
+					&:nth-of-type(7)
+						bottom: 45px
+						right: 150px
+						left: unset
+
+				.landing_bottom_content
+					display: none
+					margin-top: 21px
+					p
+						+g-r
+						font-size: 14px
+						line-height: 20px
+						color: $green_4
+					img
+						margin-top: -16px
+						height: max-content
+						width: 20px
+			.landing-socials
+				ul
+					+flex_center
+					flex-direction: column
+					grid-gap: 19px
+					li
+						svg
+							transition: transform .4s
+							path
+								transition: fill .4s
+					li:hover
+						svg
+							path
+								fill: $yellow
+								
+						
+	.index_service_inner 
+		.service_box 
+			.service_single
+				&:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10), &:nth-child(11), &:nth-child(12)
+       				display: none
+
+				
+	.index_portfolio
+		margin-top: 155px
+		.main-swiper-container
+			display: grid
+			grid-template-columns: 1fr 200px
+			grid-gap: 90px
+			margin-top: 45px
+			overflow: hidden
+
+			.swiper
+				overflow: hidden
+				width: 100%
+				
+				.swiper-slide
+					.swiper-slide-inner
+						display: flex
+						flex-direction: column
+						grid-gap: 17px
+						.swiper-img
+							height: 444px
+							img
+								object-fit: cover
+								width: 100%
+								height: 100%
+								border-radius: 5px
+						p.swiper-inner-title
+							+g-b
+							font-size: 35px
+							line-height: 42px
+							color: $gray4
+						p.swiper-other-title
+							+g-r
+							display: none
+							color: $gray2
+							font-size: 15px
+							line-height: 15px
+							padding-top: 5px
+		
+			.swiper-right-addings
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: center
+				width: 100%
+				padding-bottom: 55px
+
+				.swiper-title-box
+					p
+						opacity: 0
+						visibility: hidden
+						transition: opacity .6s
+						width: 0
+						height: 0
+						+g-l
+						font-size: 30px
+						line-height: 35px
+						color: $gray2
+						&.show
+							opacity: 1
+							visibility: visible
+							width: max-content
+							height: max-content
+
+				.swiper-navigation-btn
+					display: flex
+					.swiper-nav-button
+						width: 60px
+						height: 118px
+						+flex_center
+						cursor: pointer
+						border: 1px solid $yellow
+						svg
+							path
+								transition: fill .3s
+								stroke: $yellow
+
+						&.swiper-prev-button
+							border-top-left-radius: 119px
+							border-bottom-left-radius: 119px
+
+						&.swiper-next-button
+							border-top-right-radius: 119px
+							border-bottom-right-radius: 119px
+							margin-top: 65px
+							svg
+								transform: rotate(180deg)
+
+						&.swiper-button-disabled
+							border: 1px dashed $gray2
+							svg
+								path
+									stroke: $gray2
+
+				.swiper-pagination-bar
+					display: flex
+					align-items: center
+					grid-gap: 8px
+					width: 100%
+					.same-swiper-pagination-style
+						+g-b
+						font-size: 16px
+						line-height: 19px
+						&.image_slider__current
+							color: $yellow
+						&.total_length_slider
+							color: $gray2
+					
+					.swiper-pagination-progressbar
+						width: 100%
+						height: 2px
+						position: relative
+						background-color: $gray2
+						.swiper-pagination-progressbar-fill
+							background-color: $yellow
+							position: absolute
+							left: 0
+							top: 0
+							width: 100%
+							height: 100%
+							transform: scale(0)
+							transform-origin: left top
+
+ 
+	.index_projects
+		margin-top: 200px
+		padding-bottom: 130px
+		.index_project_main_container
+			position: relative
+			max-width: 1600px
+			margin: 0 auto
+			>.container
+				position: relative
+				z-index: 55
+			.our_projects
+				padding-top: 25px
+				height: 621px
+				.swiper
+					width: 100%
+					height: 100%
+					
+			.scroll_item
+				display: flex
+				align-items: center
+				position: relative
+				height: 100%
+				a
+					width: 100%
+				.project_img
+					position: absolute
+					top: 0
+					right: 0px
+					z-index: 55
+					max-width: 995px
+					width: 80%
+					
+					height: 100%
+					&::before
+						content: ''
+						position: absolute
+						width: 80%
+						left: 0
+						top: 0px
+						height: 100%
+						background: linear-gradient(90deg, #131A1A 0%, rgba(17, 23, 23, 0) 100%)
+						z-index: 60
+						border-radius: 9px 0px 0px 9px
+						
+					.img_absolute
+						border-radius: 10px
+						right: 0px
+						top: 0px
+						width: 100%
+						position: absolute
+						z-index: 50
+						height: 100%
+						object-fit: cover
+						
+					
+
+
+				.project_content
+					z-index: 70
+					max-width: 690px
+					align-self: flex-end
+					padding-bottom: 35px
+					
+					.title_row_project
+						display: flex
+						flex-direction: column
+						grid-gap: 44px
+						margin-bottom: 27px
+						span
+							height: 1px
+							width: 183px
+							background-color: $yellow
+						p
+							+g-b
+							font-size: 90px
+							line-height: 85px
+							color: $gray3
+					
+					.project_desc
+						width: 304px
+						+g-r
+						font-size: 16px
+						line-height: 22px
+						color: $gray2
+						margin-bottom: 12px
+						word-break: break-word
+						overflow: hidden
+						text-overflow: ellipsis
+						display: -webkit-box
+						-webkit-box-orient: vertical
+						-webkit-line-clamp: 3
+					
+					.port_link
+						display: flex
+						align-items: center
+						grid-gap: 7px
+						span
+							+g-ital-b
+							font-size: 16px
+							line-height: 18px
+							color: $gray3
+		
+	
+

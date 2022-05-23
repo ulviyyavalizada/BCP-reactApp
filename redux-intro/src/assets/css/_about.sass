@@ -1,0 +1,87 @@
+.about
+    .inner_top
+        padding-top: 43px
+        padding-bottom: 40px
+        display: flex
+        justify-content: space-between
+        grid-gap: 40px
+        .main_text
+            color: $gray3
+            font-size: 18px
+            line-height: 35px
+            +g-r
+            max-width: 406px
+    .inner_middle
+        padding-bottom: 71px
+        border-bottom: 1px solid #757575
+        .middle_reel
+            width: 100%
+            img
+                max-height: 665px
+                width: 100%
+                border-radius: 5px
+                object-fit: cover
+        .middle_text
+            padding-top: 30px
+            grid-gap: 50px
+            display: flex
+            justify-content: space-between
+            .left_box
+                > *
+                    font-size: 14px 
+                    line-height: 16px
+                    +g-r
+                p
+                    color: $white
+                span
+                    color: $yellow2
+                    padding-top: 6px
+            .right_box
+                p
+                    font-size: 18px 
+                    line-height: 35px
+                    +g-r 
+                    color: $gray3
+                    max-width: 692px
+
+    .inner_footer
+        padding-top: 37px
+        display: flex
+        align-items: center
+        grid-gap: 47px
+        .footer_reel
+            max-width: 488px
+            video
+                width: 100%
+                max-height: 323px
+                border-radius: 5px
+        
+        .footer_text
+            display: flex
+            align-items: center
+            grid-gap: 47px    
+            >div
+                max-width: 500px        
+            img
+                width: 27px
+            span
+                display: block
+                text-align: end
+                color: $yellow2
+                font-size: 65px
+                line-height: 67px
+                &:nth-child(1),  &:nth-child(3)
+                    +g-b
+                &:nth-child(2)
+                    +g-r
+                    text-align: end
+                    padding-right: 75px
+
+    .index_awards
+        margin-top: 98px
+        margin-bottom: 0
+        .award_main_container 
+            .award_title
+                margin-top: 0
+
+

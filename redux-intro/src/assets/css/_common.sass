@@ -1,0 +1,444 @@
+@import '_fonts'
+@import '_vars'
+@import '_header'
+@import '_footer'
+@import '_index'
+@import '_portfolio'
+@import '_portfolio_inner'
+@import '_services'
+@import '_service_inner'
+@import '_contact'
+@import '_about'
+@import '_projects'
+@import '_responsive'
+@import '_notFound'
+
+body
+  background-color: $body_back
+
+#root>div
+  background-image: url(../res/img/main_back.png)
+  background-size: cover
+  background-position: left top
+
+button
+  +btn_default
+
+.breadcrumb
+  display: flex
+  align-items: center
+  grid-gap: 11px
+  padding-bottom: 7px
+  padding-top: 33px
+  border-bottom: 1px solid #5E5E5E
+  margin-bottom: 23px
+  a, span, button
+    font-size: 14px
+    line-height: 17px
+    +g-sb
+  .main_breadcrumb_item, button
+    color: $white
+  .breadcrumb_item
+    color: $yellow2
+    padding-left: 7px
+
+
+.mutual_section_heading
+  display: flex
+  max-width: 600px
+  grid-gap: 17px
+  p
+    +g-b
+    font-size: 65px
+    line-height: 67px
+    color: $yellow
+  a
+    align-self: flex-end
+    padding-bottom: 5px
+    +g-eb
+    font-size: 16px
+    line-height: 22px
+    color: $gray2
+
+.row
+  > *
+    padding-right: 0
+    padding-left: 0
+
+.btn_yellow
+  width: 183px
+  height: 40px
+  +flex_center
+  border-radius: 40px
+  background-color: $yellow
+  color: $white
+  +g-b
+  font-size: 18px
+  line-height: 20px 
+
+.index_awards
+  margin: 0px 0 165px
+  .award_main_container
+    text-align: center
+    .award_title
+      margin: 60px 0 10px
+      +g-b
+      font-size: 40px
+      line-height: 48px
+      color: $gray4
+    
+    .award_content
+      margin: 0 auto 6px
+      max-width: 395px
+      +g-r
+      font-size: 16px
+      line-height: 22px
+      color: $gray4
+      
+    
+    .award_more
+      +g-eb
+      font-size: 16px
+      line-height: 20px
+      color: $yellow
+
+    .award_box
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 55px 115px
+      margin-top: 34px
+      .award_single
+        display: flex
+        align-items: center
+        justify-content: space-between
+        grid-gap: 30px
+        .award_img
+          img
+            width: 155px
+        .award_single_container
+          p
+            color: $gray4
+            text-align: right
+
+            &.award_head
+              display: flex
+              flex-direction: column
+              grid-gap: 12px
+              +g-b
+              font-size: 16px
+              line-height: 24px
+              color: $gray4
+            &.award_body
+              +g-r
+              font-size: 14px
+              line-height: 18px
+              max-width: 326px
+
+        &:nth-of-type(2n)
+          .award_img
+            order: 1
+          .award_single_container
+            order: 2
+            p
+              text-align: left
+
+.index_service_inner
+  margin-top: 170px
+  .service_box
+    display: grid
+    grid-template-columns: repeat(3,auto)
+    grid-gap: 85px 165px
+    margin-top: 80px
+    .service_single
+      display: flex
+      flex-direction: column
+      grid-gap: 13px
+      
+
+      &:nth-child(1)
+        svg
+          left: -37px
+          top: -25px
+      &:nth-child(2)
+        svg
+          left: -24px
+          top: -13px
+      &:nth-child(3)
+        svg
+          left: -23px
+          top: -9px
+      &:nth-child(4)
+        svg
+          left: -33px
+          top: -11px
+      &:nth-child(5)
+        svg
+          left: -32px
+          top: -10px
+      &:nth-child(6)
+        svg
+          left: -19px
+          top: -21px
+      &:nth-child(7)
+        svg
+          left: -13px
+          top: -19px
+      &:nth-child(8)
+        svg
+          left: -28px
+          top: -16px
+      &:nth-child(9)
+        svg
+          left: -30px
+          top: -15px
+      &:nth-child(10)
+        svg
+          left: -24px
+          top: -14px
+      &:nth-child(11)
+        svg
+          left: -31px
+          top: -20px
+      &:nth-child(12)
+        svg
+          left: -28px
+          top: -12px
+
+    p.service_title
+      position: relative
+      z-index: 1
+      color: $gray4
+      +g-b
+      font-size: 25px
+      line-height: 30px
+      svg
+        position: absolute
+        z-index: -1
+    
+      
+    p.service_content
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      -webkit-box-orient: vertical
+      max-width: 220px
+      color: $green_3
+      +g-r
+      font-size: 16px
+      line-height: 23px
+
+.index_form
+  .form_main_container
+    display: grid
+    grid-template-columns: 42% 51%
+    grid-gap: 80px
+    align-items: flex-start 
+    .form_contact
+      .entrace_form
+        width: 264px
+        +g-sb
+        font-size: 45px
+        line-height: 45px
+        color: $gray3
+      
+      .middle_form_container
+        display: flex
+        flex-direction: column
+        margin: 16px 0 30px
+        p
+          color: $gray3
+          +g-eb
+          font-size: 65px
+          line-height: 75px
+          position: relative
+          padding-left: 62px
+          z-index: 22
+          &::before
+            content: ''
+            position: absolute
+            width: 100%
+            left: 0
+            bottom: 9px
+            height: 10px
+            background-color: $green_4
+            z-index: -1
+
+      .form_contact_numbers
+        display: flex
+        align-items: center
+        grid-gap: 9.5px
+        margin-bottom: 20px
+        margin-left: 50px
+        .numbers
+          display: flex
+          flex-direction: column
+          grid-gap: 11px
+          p
+            +g-b
+            font-size: 30px
+            line-height: 35px
+            color: $gray3
+
+      .landing-socials
+        ul
+          display: flex
+          grid-gap: 27px
+          margin-left: 77px
+          li
+            align-items: center
+            svg
+              transition: transform .4s
+              path
+                transition: fill .4s
+              
+            &:hover
+              svg
+                path
+                  fill: $white
+  
+
+
+    
+    .form_main
+      form
+        .form_body
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-gap: 42px
+          .form-group
+            position: relative
+            .errorMessage
+              +g-m
+              position: absolute
+              top: 109%
+              font-size: 14px
+              line-height: 14px
+              left: 14px
+              color: #DE5000
+
+            &:focus-within
+              &::before
+                animation: borderBottom 1s linear
+                
+            .inputValidate
+              background-color: transparent
+              min-height: 20px
+              width: 100%
+              padding-left: 14px
+              padding-bottom: 1px
+              outline: none !important
+              color: $white
+              border: none
+              border-radius: 0
+              +g-r
+              font-size: 18px
+              line-height: 20px
+              &::placeholder
+                color: $white
+                +g-r
+                font-size: 18px
+                line-height: 20px
+              &:focus
+                box-shadow: none
+
+            &:not(.textarea_group)
+              padding-bottom: 4px  
+              height: 25px          
+              &::before
+                content: ''
+                position: absolute
+                left: 0
+                bottom: 0
+                height: 1px
+                width: 100%
+                background-color: $yellow
+            
+            &:not(.textarea_group):not(.file_group)
+              &::after
+                content: '*'
+                position: absolute
+                left: -2px
+                top: 2px
+                +g-r
+                font-size: 35px
+                line-height: 35px
+                color: $green_4
+
+            // label.error
+            //   color: red
+            //   +g-m
+            //   font-size: 12px
+            //   line-height: 14px
+            //   margin-left: 19px !important
+            //   margin-top: 5px
+            
+            &.textarea_group
+              grid-column-start: 1
+              grid-column-end: 3
+              textarea
+                width: 100%
+                height: 110px
+                padding: 9px 15px
+                border: 1px solid $yellow
+                border-radius: 5px
+                outline: none
+                background-color: transparent
+                resize: none
+                color: $white
+                +g-r
+                font-size: 18px
+                line-height: 20px
+                &::placeholder
+                  color: $white
+                  +g-r
+                  font-size: 18px
+                  line-height: 20px
+                &:focus
+                  box-shadow: none
+              .errorMessage
+                top: 102%
+            
+
+            &.file_group
+              max-width: 285px
+              +flex_between
+              
+              .file_input
+                display: none
+              .file_label
+                max-width: 100%
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                height: 100%
+                font-size: 18px
+                line-height: 20px
+                +g-r
+                padding-left: 14px
+                margin-bottom: 0px
+                width: 100%
+                color: $white
+                cursor: pointer
+                padding-right: 20px
+              .file_icon
+                pointer-events: none
+                margin-bottom: 2px
+                
+        .form_footer
+          padding-top: 24px
+          +flex_between
+          grid-gap: 30px
+          label
+            display: flex
+            align-items: center
+            grid-gap: 16px
+            cursor: pointer
+            span
+              +g-r
+              max-width: 115px
+              color: $green_4
+              font-size: 14px
+              line-height: 14px
+              word-break: break-word
+

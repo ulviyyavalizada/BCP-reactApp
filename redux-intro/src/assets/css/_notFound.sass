@@ -1,0 +1,25 @@
+.notFound
+    min-height: 90vh
+    padding-bottom: 70px
+    .breadcrumb
+        svg
+            transform: rotate(180deg)
+            path
+                stroke: $green_4
+        a
+            color: $green_4
+    .main_container
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        span
+            font-size: 20rem
+            transform: perspective(7em) rotatex(30deg)
+            text-decoration: $yellow2 dashed underline
+            +g-b
+        p
+            +g-m
+            font-size: 21px
+            color: $gray3
+        

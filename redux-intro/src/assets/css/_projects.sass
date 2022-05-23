@@ -1,0 +1,53 @@
+.projects
+    .mutual_section_heading
+        padding-top: 43px
+    .our_projects
+        padding-top: 61px
+        display: grid
+        grid-gap: 56px
+        .project_item
+            display: flex
+            justify-content: space-between
+            grid-gap: 50px
+            .project_info
+                display: flex
+                grid-gap: 101px
+                .project_name
+                    color: $gray3
+                    font-size: 40px
+                    line-height: 44px
+                    max-width: 306px
+                    +g-b
+                .project_desc
+                    max-width: 304px
+                    p
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        display: -webkit-box
+                        -webkit-line-clamp: 3
+                        -webkit-box-orient: vertical
+                        color: $gray2
+                        font-size: 19px
+                        line-height: 22px
+                        +g-r
+                        margin-bottom: 59px
+
+                    a
+                        width: max-content
+                        display: flex
+                        align-items: center
+                        grid-gap: 13px
+                        span
+                            color: $gray3
+                            font-size: 16px
+                            line-height: 18px
+                            +g-ital-b
+                        img
+                            width: 42px
+            .project_img
+                max-width: 325px
+                img
+                    max-height: 248px
+                    width: 100%
+                    object-fit: cover 
+                    border-radius: 5px

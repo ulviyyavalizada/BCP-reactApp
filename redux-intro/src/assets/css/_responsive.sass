@@ -1,0 +1,741 @@
+@media (min-width: 1250px)
+  .container
+    max-width: 1200px
+
+
+@media (max-width: 1250px)
+  section
+    &.index
+      .index_landing 
+        .landing-main-container
+          flex-direction: column
+          .landing-right-container
+            margin: 0 auto
+            // .brain_img
+            //   margin-left: 0
+          .landing-socials
+            display: none
+
+@media (max-width: 1200px)
+
+  body
+    header 
+      .absolute_header 
+        .header_adding_container 
+          .right_main_links
+            .part_links
+              grid-gap: 20px 40px
+  
+  section
+    &.projects 
+      .our_projects 
+        .project_item 
+          .project_info
+            grid-gap: 50px
+
+
+@media (max-width: 992px)
+  body
+    header 
+      .header-container 
+        .header-box 
+          .header-menu 
+            a.start_project
+              display: none
+      .absolute_header 
+        .header_adding_container
+          grid-gap: 70px
+        .header_adding_container 
+          .left_main_links
+            padding: 15px 50px 15px 0px
+
+  section
+
+    .index_service_inner 
+      .service_box
+        grid-gap: 55px 100px
+ 
+
+    .index_awards 
+      .award_main_container 
+        .award_box
+          grid-gap: 35px 55px
+
+    .index_form 
+      .form_main_container
+        grid-template-columns: 1fr
+        .form_main 
+          form 
+            .form_body 
+              .form-group
+                &.file_group
+                  max-width: 339px
+    
+    &.portfolio 
+      .about_main_navbar 
+        ul
+          grid-gap: 18px
+      .about_navbar_result 
+        .our_portfolios 
+          .portfolio_item
+            grid-gap: 12px
+            display: grid
+            .portfolio_img
+              grid-column: 1/3
+              max-width: unset
+            .short_info
+              grid-column-start: 2
+              grid-row-start: 2
+              justify-content: end
+            .portfolio_info
+              margin-right: -50px
+              grid-row-start: 2
+              .title
+                height: 100%
+                font-size: 32px
+                line-height: 40px
+              .text
+                display: none
+              .more_info
+                display: none
+              
+    &.portfolio_inner
+      .main_descr > div
+        grid-gap: 42px
+      .total_images 
+        .text_card
+          p
+            column-gap: 42px
+            font-size: 13px
+            line-height: 24px
+
+    &.service_inner 
+      .main_container 
+        .inner_middle
+          flex-direction: column-reverse
+          .text
+            max-width: unset
+          .middle_img
+            max-width: unset
+
+    &.about 
+      .inner_top
+        .main_text
+          font-size: 16px
+          line-height: 30px
+      .inner_middle 
+        .middle_text 
+          .right_box 
+            p
+              font-size: 16px
+              line-height: 30px
+              max-width: 458px
+      .inner_footer 
+        flex-direction: column  
+        .footer_text 
+          span
+            font-size: 49px
+            line-height: 51px
+      
+    &.projects 
+      .our_projects 
+        grid-gap: 66px
+        .project_item 
+          grid-gap: 20px
+          flex-direction: column
+          .project_info
+            justify-content: space-between
+          .project_img
+            width: 100%
+            max-width: unset
+            img
+              max-height: 484px
+          .project_desc
+            p
+              margin-bottom: 20px
+
+@media (max-width: 768px)
+  body
+    header 
+      .header-container
+        .page_language
+          display: none
+        .header-box 
+          .hamburger
+            &:hover
+              span
+                background-color: $gray3
+                &:nth-of-type(2)
+                  transform: translateX(-6px)
+                &:nth-of-type(3)
+                  transform: translateX(-12px)
+            &.open
+              span
+                &:nth-of-type(1)
+                  transform: unset
+                &:nth-of-type(3)
+                  transform: translateX(-12px)
+                &:nth-of-type(2)
+                  opacity: 1
+                  visibility: visible
+
+      .absolute_header 
+        position: fixed
+        overflow: auto
+        padding-bottom: 103px
+        top: 0px
+        transform: translateX(1000px)
+        z-index: 900
+        min-height: 100%
+        opacity: 1
+        visibility: visible
+        padding-top: 0
+        transition: transform .5s
+        &.show
+          transform: translateX(0px)
+          height: 100%
+          
+        .header_adding_container
+          .left_main_links
+            border-right: none 
+            padding: 59px 0px 0px
+            width: 100%
+            .landing-socials
+              display: block
+            .main_category:not(.header-page-lang)
+              display: grid
+              grid-gap: 40px
+              li
+                  font-size: 25px
+                  &.mobile_overlay_services
+                    display: block
+
+
+          .right_main_links
+            display: none
+
+    footer 
+      padding: 69px 0 7px
+      .footer_container 
+        position: relative
+        .footer_box
+          align-items: unset
+          grid-gap: 19px
+          flex-direction: column-reverse
+          padding-right: 0
+          ul
+            width: unset
+        .footer_copyright
+          position: absolute
+          bottom: 0
+          right: 0
+          padding-bottom: 12px
+          p
+            font-size: 10px
+            line-height: 10px
+    
+  section 
+    
+    .mutual_section_heading 
+      p
+        font-size: 30px
+        line-height: 30px
+      a
+        padding-bottom: 0
+    
+    &.notFound
+      .main_container
+        span
+          font-size: 164px
+
+    &.index 
+      .mutual_section_heading 
+        justify-content: space-between
+      .index_landing 
+        margin-top: 83px
+        .landing-main-container 
+          .landing-right-container 
+            .dot_brain
+              display: none
+            .landing_bottom_content
+              display: flex
+          .landing-left-container
+            width: unset
+            .landing_bottom_content
+              display: none
+            .landing_title_block 
+              grid-gap: 17px
+              p
+                &.landing_title
+                  font-size: 40px
+                  line-height: 40px
+      .index_portfolio 
+        .main-swiper-container
+          grid-template-columns: 1fr
+          grid-gap: 20px
+          margin-top: 28px
+          .swiper-right-addings
+            display: none
+
+          .swiper-wrapper
+            grid-gap: 35px
+            flex-direction: column
+            .swiper-slide
+              flex-shrink: unset
+              .swiper-slide-inner
+                grid-gap: 0
+                .swiper-img
+                  height: 300px
+                p.swiper-inner-title
+                  padding-top: 10px
+                  font-size: 20px
+                  line-height: 20px
+                p.swiper-other-title
+                  display: block
+      
+      .index_projects 
+        .index_project_main_container 
+          .our_projects
+            margin-top: 21px
+            height: max-content
+            padding-top: 0
+          .swiper-slide
+            height: max-content !important
+          .scroll_item
+            flex-direction: column-reverse
+            .project_img
+              position: relative
+              height: 220px
+              width: 100%
+              .img_absolute
+                position: relative
+
+            .project_content
+              width: 100%
+              
+              padding-top: 19px
+              .title_row_project
+                grid-gap: 0
+                p
+                  margin-top: 28px
+                  margin-bottom: 22px
+                  font-size: 35px
+                  line-height: 35px
+              .project_desc
+                max-width: 304px
+                width: unset
+
+    .index_service_inner 
+      .service_box
+        grid-template-columns: 1fr 1fr
+        padding-left: 30px
+        margin-top: 41px
+
+
+    .index_awards 
+      .award_main_container 
+        .award_box 
+          grid-gap: 45px
+          grid-template-columns: 1fr
+          .award_single
+            grid-gap: 15px
+            &:nth-of-type(2n+1)
+              flex-direction: row-reverse
+            .award_single_container 
+              p
+                text-align: start
+
+    .index_form 
+      .form_main_container 
+        .form_contact 
+          .form_contact_numbers
+            margin-left: 0
+          .landing-socials
+            ul
+              margin-left: 0
+              grid-gap: 36px
+              li
+                a
+                  svg
+                    transform: scale(1.4)
+
+
+    &.portfolio_inner 
+      .main_descr > div
+        width: 100%
+        grid-gap: 52px
+      .total_images
+        grid-gap: 27px
+        .one_image,
+        .two_images,
+        .text_card
+          img
+            border-radius: 3px
+        .two_images
+          margin-top: 27px
+          margin-bottom: 27px
+          &.left
+            img
+              margin-right: 0
+              width: 100%
+          &.right
+            img
+              margin-left: 0
+              width: 100%
+
+    &.projects 
+      .mutual_section_heading
+        padding-top: 0
+        padding-bottom: 0
+      .our_projects
+        padding-top: 37px
+        grid-gap: 56px
+        .project_item
+          grid-gap: 29px
+          .project_info
+            grid-gap: 25px
+            .project_name
+              font-size: 20px
+              line-height: 20px
+            .project_desc
+              max-width: 180px
+              p
+                
+                font-size: 14px
+                margin-bottom: 6px
+  
+@media (max-width: 576px)
+  .container
+    padding: 0 25px
+    .row
+      margin: 0
+
+  section
+    .breadcrumb
+      margin-bottom: 27px
+
+    .mutual_section_heading
+      padding-bottom: 21px
+      max-width: 250px
+      
+    
+  
+  section 
+    &.index
+      .mutual_section_heading
+        max-width: unset
+        justify-content: space-between
+        a
+          font-size: 13px
+          line-height: 13px
+          text-align: end
+        
+      .index_projects
+        margin-top: 131px
+        padding-bottom: 96px
+        .index_project_main_container 
+          .our_projects
+            margin-top: 0
+      
+      .index_portfolio 
+        .main-swiper-container 
+          margin-top: 7px
+          .swiper 
+            .swiper-slide 
+              .swiper-slide-inner 
+                .swiper-img
+                  height: 199px
+    .index_service_inner 
+      margin-top: 97px
+      .service_box
+        grid-gap: 85px
+        margin-top: 20px
+        grid-template-columns: 1fr
+        p
+          &.service_title
+            font-size: 25px
+            line-height: 31px
+
+    .index_awards
+      margin: 0 0 131px
+      .award_main_container 
+        .award_title
+          margin: 14px 0 12px
+          font-size: 30px
+          line-height: 37px
+        .award_content
+          font-size: 13px
+          line-height: 16px
+          margin-bottom: 12px
+
+    .index_form 
+      .form_main_container 
+        grid-gap: 62px
+        .form_main 
+          form
+            .form_body
+              display: flex
+              flex-direction: column
+              grid-gap: 40px 35px
+              .form-group.file_group
+                max-width: unset
+                width: 100%
+              .textarea_group
+                margin-top: -20px
+            .form_footer
+              label
+                span
+                  max-width: 77px
+                  font-size: 12px
+        .form_contact 
+          .entrace_form
+            font-size: 30px
+            line-height: 30px
+          .middle_form_container 
+            p
+              font-size: 50px
+              line-height: 70px
+
+          .form_contact_numbers
+            grid-gap: 8px
+            margin-bottom: 28px
+            .numbers 
+              p
+                font-size: 25px
+                line-height: 25px
+          .landing-socials
+            ul 
+              justify-content: space-between
+              li 
+                a 
+                  svg
+                    transform: scale(1.53)
+   
+    &.portfolio 
+      .mutual_section_heading
+        max-width: unset
+        display: flex
+        justify-content: space-between
+        align-items: center
+        grid-gap: 25px
+        flex-wrap: wrap
+        .mobile_filterBtn
+          display: block
+            
+      .portfolio_inner_title
+        font-size: 20px
+        line-height: 20px
+        sup
+          top: -1.1em
+      .about_main_navbar
+        position: fixed
+        top: 0
+        transform: translateX(700px)
+        left: 0
+        width: 100%
+        z-index: 500
+        min-height: 100%
+        overflow-x: hidden
+        overflow-y: auto
+        height: 100%
+        background-image: url(../res/img/filterBg.png)
+        background-size: cover
+        background-position: center
+        visibility: hidden
+        transition: all .5s
+        &.open
+          visibility: visible
+          transform: translateX(0px)
+        ul
+          grid-gap: 16px
+          padding-top: 85px
+          padding-bottom: 75px
+          border-top: none
+          flex-direction: column
+          li
+            display: flex
+            justify-content: center
+            a
+              font-size: 22px
+              line-height: 27px
+              &::after
+                top: unset
+                bottom: 2px
+        .close_nav
+          display: flex
+      .about_navbar_result 
+        .our_portfolios 
+          grid-gap: 35px
+          .portfolio_item
+            grid-gap: 7px 15px
+            .portfolio_img
+              height: 243px
+            .portfolio_info
+              margin-right: 0px
+              .title
+                padding-top: 8px
+                font-size: 20px
+                line-height: 20px
+              
+        .more_btn 
+          button
+            min-width: 155px
+            padding: 13px 36px
+
+    &.portfolio_inner 
+      .main_descr
+        padding-top: 20px
+        & > div 
+          p
+            font-size: 15px
+            line-height: 25px
+          img
+            margin-left: 0
+      .total_images
+        padding-top: 34px
+        .one_image, .two_images, .text_card
+          img
+            height: 300px
+        .two_images
+          margin-top: 27px
+          margin-bottom: 27px
+          &.left
+            img
+              margin-right: 0
+              width: 100%
+          &.right
+            img
+              margin-left: 0
+              width: 100%
+        .text_card 
+          p
+            column-count: 1
+            padding-left: 76px
+
+    &.services 
+      .index_form
+          padding-top: 75px
+    
+    &.service_inner 
+      .main_container 
+        .inner_top 
+          padding-bottom: 36px
+          .mutual_section_heading
+            padding-top: 0
+            padding-bottom: 17px
+          .main_text
+            padding-top: 0
+            font-size: 16px
+            line-height: 30px
+        .inner_middle
+          grid-gap: 23px
+          padding-top: 23px
+          padding-bottom: 35px
+          .text 
+            ul 
+              li
+                grid-gap: 16px
+                padding-top: 7px
+        .inner_footer
+          padding-top: 35px
+          border-bottom: none
+          padding-bottom: 8px
+          p
+            font-size: 16px
+            line-height: 30px
+
+    &.contact
+      .mutual_section_heading
+        padding-top: 4px
+        
+      .index_form
+          padding-top: 9px
+          padding-bottom: 38px
+      .contact_map
+        height: 195px
+
+    &.about 
+      .inner_top
+        grid-gap: 18px
+        padding-top: 0
+        padding-bottom: 28px
+        flex-direction: column
+        .mutual_section_heading
+          padding-bottom: 0
+        .main_text
+          max-width: unset
+      .inner_middle
+        padding-bottom: 40px
+        .middle_text
+          padding-top: 12px
+          flex-direction: column
+          grid-gap: 35px
+          .left_box
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            grid-gap: 6px
+            span
+              padding-top: 0
+
+      .inner_footer
+        padding-top: 28px
+        grid-gap: 49px
+        align-items: unset
+        .footer_text
+          span
+            font-size: 40px
+            line-height: 41px
+            
+      .index_awards
+        margin-top: 78px
+
+    &.projects 
+      .our_projects 
+        .project_item 
+          .project_info 
+            .project_desc
+              max-width: 172px
+
+@media (max-width: 415px)
+  section
+    .index_awards 
+      .award_main_container 
+        .award_box 
+          .award_single
+            grid-gap: 15px
+            .award_single_container 
+              p
+                &.award_head
+                  font-size: 14px
+                  line-height: 12px
+                &.award_body
+                  font-size: 11px
+                  line-height: 14px
+                  margin-top: 8px
+            .award_img
+              img
+                width: 96px
+    .index_form 
+      .form_main_container 
+        .form_contact 
+          .landing-socials ul
+            grid-gap: 20px
+          .middle_form_container 
+            p
+              padding-left: 10px
+    
+    &.portfolio_inner 
+      .total_images
+        .one_image, .two_images, .text_card
+          img
+            height: 210px
+        .text_card 
+          p
+            padding-left: 0
+
+    &.about 
+      .inner_middle 
+        .middle_reel 
+          img
+            max-height: 202px

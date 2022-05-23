@@ -1,0 +1,192 @@
+.portfolio
+    .mutual_section_heading
+        margin-bottom: 31px
+        .mobile_filterBtn
+            display: none
+            button
+                display: flex
+                flex-direction: column
+                align-items: center
+            span
+                color: $gray6
+                font-size: 15px
+                padding-top: 4px
+                line-height: 12px
+    .portfolio_inner_title
+        font-size: 30px
+        line-height: 37px
+        color: $gray3
+        padding-bottom: 12px
+        +g-b
+        sup
+            +g-sb
+            color: $yellow2
+            font-size: 12px
+            display: inline-block
+            line-height: 15px
+            top: -1.75em
+
+    .about_main_navbar
+        width: 100%
+        overflow-x: auto
+        padding-top: 2px
+        padding-bottom: 5px
+        transition: all .3s
+        //Firefox
+        scrollbar-color: transparent transparent
+        &::-webkit-scrollbar
+            height: 1px
+            scrollbar-width: thin
+            scrollbar-color: transparent transparent
+        &::-webkit-scrollbar-track
+            background: transparent
+            border-radius: 15px
+        &::-webkit-scrollbar-thumb
+            background: transparent
+            border-radius: 15px
+            border: 1px solid transparent
+        .close_nav
+            padding-top: 52px
+            display: none
+            width: 100%
+            justify-content: flex-end
+        ul
+            display: flex
+            grid-gap: 38px
+            justify-content: space-between
+            padding: 0 15px
+            border-top: 1px solid $gray6
+            width: max-content
+            min-width: 100%
+            li
+                display: inline-block
+                a
+                    font-size: 16px
+                    line-height: 16px
+                    +g-sb
+                    color: $gray6
+                    display: block
+                    padding: 11px
+                    position: relative
+                    margin: 0 -1px
+                    transition: all .3s 
+
+                    &::after
+                        content: ''
+                        position: absolute
+                        left: 0px
+                        top: -2px
+                        width: 100%
+                        height: 3px
+                        background-color: $green_4
+                        transform-origin: top right
+                        transition: transform 0.5s ease
+                        transform: scaleX(0)
+                    &:hover
+                        color: $green_4
+                        &::after
+                            transform-origin: top left
+                            transform: scaleX(1)
+                    &.active
+                        color: $green_4
+                        &::after
+                            transform-origin: top left
+                            transform: scaleX(1)
+    .about_navbar_result
+        margin-top: 60px
+        padding-bottom: 120px
+        .our_portfolios
+            display: grid
+            grid-gap: 50px
+            .portfolio_item
+                display: flex
+                grid-gap: 40px
+                .short_info
+                    align-self: center
+                    display: flex
+                    height: max-content
+                    
+                    img
+                        height: 49px
+                    span
+                        +g-r
+                        color: $white
+                        font-size: 14px 
+                        line-height: 17px
+                        height: max-content
+                        display: inline-block
+                    .time
+                        padding-top: 3px
+                        margin-right: -5px
+                    .category
+                        width: 101px
+                        margin-left: -3px
+                        padding-top: 27px
+
+                .portfolio_img
+                    max-width: 630px
+                    height: 419px
+                    width: 100%
+                    a
+                        width: 100%
+                        height: 100%
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        border-radius: 5px
+                .portfolio_info
+                    max-width: 343px
+                    .title
+                        +g-b
+                        color: $yellow2
+                        font-size: 45px
+                        line-height: 45px
+                        overflow: hidden
+                        display: -webkit-box
+                        -webkit-line-clamp: 2
+                        -webkit-box-orient: vertical
+                    .text
+                        +g-r
+                        padding-top: 13px
+                        color: $green_3
+                        margin-bottom: 34px
+                        font-size: 16px
+                        line-height: 22px
+                        overflow: hidden
+                        display: -webkit-box
+                        -webkit-line-clamp: 5
+                        -webkit-box-orient: vertical
+                    .more_info
+                        >div
+                            display: flex
+                            align-items: center
+                            grid-gap: 11px
+                            span
+                                color: $white
+                                font-size: 14px
+                                line-height: 17px
+                                +g-r
+
+        .more_btn
+            display: flex
+            justify-content: center
+            margin-top: 35px
+            button
+                color: $yellow
+                +g-r
+                border: 1px solid $yellow
+                border-radius: 40px
+                padding: 13px 46px
+                font-size: 14px
+                line-height: 14px
+                min-width: 183px
+                text-align: center
+                transition: all .3s
+                &:hover
+                    border: 1px solid $gray4
+                    color: $gray4
+
+
+
+
